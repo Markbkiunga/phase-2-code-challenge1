@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Phase-2-week-1-code-challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Details
 
-## Available Scripts
+#### Author: <a href="https://github.com/Markbkiunga">Mark Brian</a>
 
-In the project directory, you can run:
+#### Link to Website: <https://week-3-code-challenge-phi.vercel.app/>
 
-### `npm start`
+### Objective
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Implement a React application that displays a list of your recent bank transactions, among other features.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Requirements
 
-### `npm test`
+For this assessment, I am required to:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Apply State using the `useState` hook
+- Apply Effects in React using the `useEffect` hook
+- Render and re-render in React
+- Use React Events
+- Use Forms and inputs in React
+- Consume APIs/Communicate with a server in React.
+- Perform CRUD operations in React.
 
-### `npm run build`
+### Pre-requisite Data
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<a href="https://bank-of-flatiron-backend-ebon.vercel.app/transactions">Transactions Data</a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Deliverables
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+As a user, one can:
 
-### `npm run eject`
+1. See a table of the transactions.
+2. Fill out and submit the form to add a new transaction.
+3. Filter transactions by typing into the search bar.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Events required
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Add an event listener to the transactions form to listen for submission and add the transaction to the table.
+2. Add an event listener to the searchbar button to listen for a change in the input value and filter the displayed transactions.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Pre-requisites
 
-## Learn More
+In order to use this repository you will need the following:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Operating System (Windows 10+, Linux 3.8+, or MacOS X 10.7+)
+- RAM >= 4GB
+- Free Space >= 2GB
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### User Manual
 
-### Code Splitting
+**Bank of FlatIron** displays a user's transactions and respective details and enables the user to add more transactions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Open the website link provided at the beginning of this file on your browser.
+2. To add a transaction, fill in the form and click Add Transaction.
+3. View Transactions displayed in the table.
