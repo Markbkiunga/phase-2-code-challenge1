@@ -21,7 +21,9 @@ function App() {
         setTransactions={setTransactions}
       />
       <TransactionTable transactions={transactions} />
-      <a href='https://github.com/Markbkiunga'>Feel free to check out my Github</a>
+      <a href="https://github.com/Markbkiunga" target="_blank" rel="noreferrer">
+        Feel free to check out my Github
+      </a>
     </div>
   );
 }
