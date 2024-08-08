@@ -21,6 +21,7 @@ function App() {
         setTransactions={setTransactions}
       />
       <TransactionTable transactions={transactions} />
+      <a href='https://github.com/Markbkiunga'>Feel free to check out my Github</a>
     </div>
   );
 }
