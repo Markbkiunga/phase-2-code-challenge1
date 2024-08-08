@@ -4,7 +4,7 @@
 
 #### Author: <a href="https://github.com/Markbkiunga">Mark Brian</a>
 
-#### Link to Website: <https://week-3-code-challenge-phi.vercel.app/>
+#### Link to Website: https://phase-2-code-challenge1.vercel.app/
 
 ### Objective
 
