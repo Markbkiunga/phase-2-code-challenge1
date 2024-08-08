@@ -1,5 +1,15 @@
+body,
+html {
+  height: 100%;
+  background-color: whitesmoke;
+}
 .App {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .App-logo {
@@ -27,7 +37,73 @@
 .App-link {
   color: #61dafb;
 }
+.heading-container {
+  width: 100%;
+  border-bottom: solid 1px black;
+  background-image: radial-gradient(white, grey);
+  padding: 25px;
+}
+.heading {
+  font-family: 'Times New Roman', Times, serif;
+}
+.form-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-input {
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 5px;
+}
+.form-input:focus {
+  color: black;
+  background-color: rgb(216, 216, 216);
+}
 
+.add-transaction-button {
+  border-radius: 5px;
+}
+.add-transaction-button:hover {
+  cursor: pointer;
+  background-color: rgb(176, 176, 176);
+}
+
+.searchbar-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 75%;
+}
+.searchbar {
+  border-radius: 5px;
+}
+.transactions-table {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 25px;
+  border-collapse: collapse;
+  width: 75%;
+  border: 3px solid #ddd;
+}
+.transactions-table-heading {
+  border: 2px solid #ddd;
+  padding: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+}
+.transactions-table-heading-row {
+  background-color: rgb(197, 197, 197);
+}
+.transactions-table-body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.transaction-row {
+  border-bottom: 1px solid #ddd;
+}
+.transaction-row:nth-child(even) {
+  background-color: #ddd;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

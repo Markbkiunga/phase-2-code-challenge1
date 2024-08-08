@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Heading from './components/Heading';
+import Form from './components/Form';
+import TransactionTable from './components/TransactionTable';
+import { useEffect, useState } from 'react';
+import SearchBar from './components/SearchBar';
 
 function App() {
+  const [transactions, setTransactions] = useState([]);
+  useEffect(() => {
+    fetch('https://bank-of-flatiron-backend-ebon.vercel.app/transactions/')
+      .then((response) => response.json())
+      .then((transactions) => setTransactions(transactions));
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Heading />
+      <Form transactions={transactions} setTransactions={setTransactions} />
+      <SearchBar
+        transactions={transactions}
+        setTransactions={setTransactions}
+      />
+      <TransactionTable transactions={transactions} />
     </div>
   );
 }
