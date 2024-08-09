@@ -4,21 +4,22 @@ function SearchBar({ transactions, setTransactions }) {
   const [searchByDescription, setSearchByDescription] = useState('');
 
   function handleSearch(event) {
-    setSearchByDescription(
-      (searchByDescription) => (searchByDescription = event.target.value)
-    );
+    const searchValue = event.target.value;
+    setSearchByDescription(searchValue);
 
     const filteredTransactions = transactions.filter((transaction) => {
-      return transaction.description.includes(searchByDescription);
+      return transaction.description
+        .toLowerCase()
+        .includes(searchByDescription.toLowerCase());
     });
 
     setTransactions(filteredTransactions);
   }
 
   return (
-    <div className='searchbar-container'>
+    <div className="searchbar-container">
       <input
-      className='searchbar'
+        className="searchbar"
         type="text"
         onChange={handleSearch}
         placeholder="Search Transaction"
