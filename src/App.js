@@ -14,22 +14,29 @@ function App() {
       .then((response) => response.json())
       .then((transactions) => {
         setTransactions(transactions);
-        setOriginalTransactions(transactions); 
+        setOriginalTransactions(transactions);
       });
   }, []);
 
   return (
     <div className="App">
-      <Heading />
-      <Form transactions={transactions} setTransactions={setTransactions} />
-      <SearchBar
-        originalTransactions={originalTransactions} 
-        setTransactions={setTransactions}
-      />
-      <TransactionTable transactions={transactions} />
-      <a href="https://github.com/Markbkiunga" target="_blank" rel="noreferrer">
-        Feel free to check out my Github
-      </a>
+      <div id="loader" className="loader"></div>;
+      <div id="content" className="hidden">
+        <Heading />
+        <Form transactions={transactions} setTransactions={setTransactions} />
+        <SearchBar
+          originalTransactions={originalTransactions}
+          setTransactions={setTransactions}
+        />
+        <TransactionTable transactions={transactions} />
+        <a
+          href="https://github.com/Markbkiunga"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Feel free to check out my Github
+        </a>
+      </div>
     </div>
   );
 }

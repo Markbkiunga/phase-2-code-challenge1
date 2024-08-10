@@ -4,6 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+document.addEventListener('DOMContentLoaded', () => {
+  // Simulate an API request or any async operation
+  setTimeout(() => {
+    hideLoader();
+    showContent();
+  }, 2000); // Replace with your actual data loading logic and time
+
+  function hideLoader() {
+    const loader = document.getElementById('loader');
+    loader.style.display = 'none';
+  }
+
+  function showContent() {
+    const content = document.getElementById('content');
+    content.style.display = 'contents';
+  }
+});
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
