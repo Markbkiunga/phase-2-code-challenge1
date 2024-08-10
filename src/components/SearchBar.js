@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 
-function SearchBar({ transactions, setTransactions }) {
+function SearchBar({ originalTransactions, setTransactions }) {
   const [searchByDescription, setSearchByDescription] = useState('');
 
   function handleSearch(event) {
     const searchValue = event.target.value;
     setSearchByDescription(searchValue);
 
-    const filteredTransactions = transactions.filter((transaction) => {
-      return transaction.description
-        .toLowerCase()
-        .includes(searchByDescription.toLowerCase());
+    const filteredTransactions = originalTransactions.filter((transaction) => {
+      return transaction.description.toLowerCase().includes(searchValue.toLowerCase());
     });
 
     setTransactions(filteredTransactions);

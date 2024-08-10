@@ -7,17 +7,23 @@ import SearchBar from './components/SearchBar';
 
 function App() {
   const [transactions, setTransactions] = useState([]);
+  const [originalTransactions, setOriginalTransactions] = useState([]);
+
   useEffect(() => {
     fetch('https://bank-of-flatiron-backend-ebon.vercel.app/transactions/')
       .then((response) => response.json())
-      .then((transactions) => setTransactions(transactions));
+      .then((transactions) => {
+        setTransactions(transactions);
+        setOriginalTransactions(transactions); 
+      });
   }, []);
+
   return (
     <div className="App">
       <Heading />
       <Form transactions={transactions} setTransactions={setTransactions} />
       <SearchBar
-        transactions={transactions}
+        originalTransactions={originalTransactions} 
         setTransactions={setTransactions}
       />
       <TransactionTable transactions={transactions} />
